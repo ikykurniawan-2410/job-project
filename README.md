@@ -27,7 +27,7 @@ Aplikasi ini memudahkan pencari kerja untuk menemukan lowongan pekerjaan dan per
 
 1. **Clone repository ini ke folder `htdocs` XAMPP:**
    ```bash
-   git clone [url-repo-anda]
+   git clone [https://github.com/ikykurniawan-2410/job-project.git]
    ```
 2. **Jalankan XAMPP dan aktifkan Apache & MySQL.**
 3. **Import database** yang disediakan (jika ada file `.sql`).
@@ -64,8 +64,11 @@ Aplikasi ini memudahkan pencari kerja untuk menemukan lowongan pekerjaan dan per
 
 ## 🙋‍♂️ Mahasiswa
 
-> _Silakan tambahkan nama & NIM anggota kelompok di sini jika perlu._
-
+**FAUZAN ULYADDA PUTRA**
+**AMELIA NUR AINI**
+**RISMA**
+**RIZKI KURNIAWAN**
+**SEFFRINA YESIKA**
 ---
 
 Terima kasih telah menggunakan aplikasi ini!  
