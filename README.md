@@ -41,7 +41,7 @@ Aplikasi ini memudahkan pencari kerja untuk menemukan lowongan pekerjaan dan per
 
 ## 💻 Teknologi yang Digunakan
 
-- PHP 7.3+
+- PHP 8.4+
 - CodeIgniter 4
 - MySQL/MariaDB
 - Bootstrap 5
