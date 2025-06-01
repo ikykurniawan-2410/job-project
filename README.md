@@ -64,11 +64,11 @@ Aplikasi ini memudahkan pencari kerja untuk menemukan lowongan pekerjaan dan per
 
 ## 🙋‍♂️ Mahasiswa
 
-**FAUZAN ULYADDA PUTRA**
-**AMELIA NUR AINI**
-**RISMA**
-**RIZKI KURNIAWAN**
-**SEFFRINA YESIKA**
+- **Fauzan Ulyadda Putra**
+- **Amelia Nur Aini**
+- **Risma Rizki Kurniawan**
+- **Seffrina Yesika**
+
 ---
 
 Terima kasih telah menggunakan aplikasi ini!  
