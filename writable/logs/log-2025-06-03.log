@@ -1,0 +1,140 @@
+CRITICAL - 2025-06-03 20:52:22 --> Invalid file: tips_karir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tips_karir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('tips_karir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('tips_karir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:52:23 --> Invalid file: tips_karir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tips_karir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('tips_karir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('tips_karir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:52:51 --> Invalid file: tips_karir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tips_karir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('tips_karir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('tips_karir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:52:52 --> Invalid file: tips_karir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tips_karir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('tips_karir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('tips_karir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:52:52 --> Invalid file: tips_karir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tips_karir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('tips_karir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('tips_karir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:52:53 --> Invalid file: tips_karir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tips_karir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('tips_karir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('tips_karir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:52:53 --> Invalid file: tips_karir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tips_karir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('tips_karir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('tips_karir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:52:55 --> Invalid file: tips_karir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tips_karir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('tips_karir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('tips_karir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:53:29 --> Invalid file: TipsKarir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('TipsKarir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('TipsKarir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('TipsKarir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:53:29 --> Invalid file: TipsKarir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('TipsKarir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('TipsKarir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('TipsKarir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:53:30 --> Invalid file: TipsKarir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('TipsKarir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('TipsKarir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('TipsKarir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:53:30 --> Invalid file: TipsKarir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('TipsKarir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('TipsKarir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('TipsKarir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:53:30 --> Invalid file: TipsKarir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('TipsKarir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('TipsKarir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('TipsKarir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2025-06-03 20:53:46 --> Invalid file: /TipsKarir.php
+#0 C:\xampp\htdocs\job-project\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/TipsKarir.php')
+#1 C:\xampp\htdocs\job-project\system\Common.php(1089): CodeIgniter\View\View->render('/TipsKarir', Array, true)
+#2 C:\xampp\htdocs\job-project\app\Controllers\TipsKarir.php(9): view('/TipsKarir')
+#3 C:\xampp\htdocs\job-project\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 C:\xampp\htdocs\job-project\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TipsKarir))
+#5 C:\xampp\htdocs\job-project\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\job-project\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\job-project\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}

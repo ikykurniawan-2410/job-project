@@ -88,7 +88,7 @@ nav {
 }
 .job-view .search-bar {
     min-height: 120px;
-    background-color: #0D3880;
+    background-color: #4C95A2;
 }
 .job-view .search-bar input[type=text] {
     outline: none;
@@ -118,7 +118,7 @@ nav {
     background-color: transparent !important;
     color: white;
     outline: none;
-    border: 2px solid white;
+    border: 2px solid #7fffd4;
     border-radius: 5px;
 }
 .job-view .list-job .list,
@@ -466,16 +466,19 @@ nav {
 
 /* Tambahkan class khusus pada tombol, misal: btn-cari */
 .btn-cari {
-    background: transparent;
+    background-color: #80D0C7 !important;
     color: #fff;
-    border: 2px solid #fff;
+    border: none !important;
     transition: background 0.2s, color 0.2s;
 }
 .btn-cari:hover, .btn-cari:focus {
-    background: #0d6efd;
-    color: #fff;
-    border-color: #0d6efd;
+    background-color: #13547a !important; /* versi hover lebih gelap */
+    color: #fff !important;
+    border: none !important;
 }
+
+
+
 
 /* Efek hover pada navbar */
 .navbar-nav .nav-link {

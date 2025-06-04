@@ -45,6 +45,8 @@ $routes->post('/signupCompany', 'RegistrationCompany::registrationCompany');
 $routes->get('/job', 'Job::index');
 $routes->post('/apply_job','Job::applyJob');
 $routes->post('/detail_job', 'Job::detailJob');
+$routes->get('/TipsKarir', 'TipsKarir::index');
+
 
 $routes->get('/dashboard_user', 'UserDashboard::index', ['filter' => 'UserFilter']);
 $routes->get('/dashboard_user/profile', 'UserDashboard::user', ['filter' => 'UserFilter']);
