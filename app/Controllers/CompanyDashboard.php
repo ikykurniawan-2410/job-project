@@ -186,4 +186,40 @@ class CompanyDashboard extends BaseController
             return redirect()->back()->withInput();
         }
     }
+
+    // Kirim panggilan interview ke pelamar
+    public function call_interview()
+    {
+        $idPelamar = $this->request->getPost('idPelamar');
+        $idJob     = $this->request->getPost('idJob');
+        // Update status pelamar jadi "Dipanggil Interview" untuk job tertentu
+        $this->cvModel->update(
+            ['idUser' => $idPelamar, 'idJob' => $idJob],
+            ['status' => 'Dipanggil Interview']
+        );
+
+        if ($this->db->affectedRows()) {
+            return redirect()->back()->with('success', 'Panggilan interview berhasil dikirim.');
+        } else {
+            return redirect()->back()->with('error', 'Gagal mengirim panggilan interview.');
+        }
+    }
+
+    // Terima pelamar di perusahaan
+    public function accept_pelamar()
+    {
+        $idPelamar = $this->request->getPost('idPelamar');
+        $idJob     = $this->request->getPost('idJob');
+        // Update status pelamar jadi "Diterima" untuk job tertentu
+        $this->cvModel->update(
+            ['idUser' => $idPelamar, 'idJob' => $idJob],
+            ['status' => 'Diterima']
+        );
+
+        if ($this->db->affectedRows()) {
+            return redirect()->back()->with('success', 'Pelamar berhasil diterima.');
+        } else {
+            return redirect()->back()->with('error', 'Gagal menerima pelamar.');
+        }
+    }
 }

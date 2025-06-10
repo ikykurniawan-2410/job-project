@@ -12,7 +12,7 @@
                             <h3 style="color: rgb(13,56,128)" class="fw-bold">Mulai rekrut kandidat!</h3>
                             <?php if ($message = session()->getFlashdata('success')) { ?>
                                 <div class="alert alert-success alert-dismissible fade show col-10" role="alert">
-                                     <?= $message ?> <a class="text-decoration-none" href="/login_company">login</a>
+                                    <?= $message ?> <a class="text-decoration-none" href="/login_company">login</a>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             <?php } ?>

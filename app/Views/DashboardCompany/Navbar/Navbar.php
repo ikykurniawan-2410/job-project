@@ -23,12 +23,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/dashboard_company">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Pelamar</a>
-                    </li>
                 </ul>
             </div>
         </div>

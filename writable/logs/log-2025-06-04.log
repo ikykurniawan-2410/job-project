@@ -1,0 +1,39 @@
+CRITICAL - 2025-06-04 13:59:23 --> Undefined variable $webDevCount
+#0 D:\xampp\htdocs\Job\app\Views\Job\JobView.php(60): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 D:\xampp\htdocs\Job\system\View\View.php(210): include('...')
+#2 D:\xampp\htdocs\Job\system\View\View.php(213): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():207}()
+#3 D:\xampp\htdocs\Job\system\Common.php(1089): CodeIgniter\View\View->render()
+#4 D:\xampp\htdocs\Job\app\Controllers\Job.php(32): view()
+#5 D:\xampp\htdocs\Job\system\CodeIgniter.php(825): App\Controllers\Job->index()
+#6 D:\xampp\htdocs\Job\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#7 D:\xampp\htdocs\Job\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\xampp\htdocs\Job\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\Job\system\Commands\Server\rewrite.php(43): require_once('...')
+#10 {main}
+ERROR - 2025-06-04 14:00:34 --> Unknown column 'kategori' in 'where clause'
+CRITICAL - 2025-06-04 14:00:34 --> Unknown column 'kategori' in 'where clause'
+#0 D:\xampp\htdocs\Job\system\Database\MySQLi\Connection.php(292): mysqli->query()
+#1 D:\xampp\htdocs\Job\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\xampp\htdocs\Job\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\xampp\htdocs\Job\system\Database\BaseBuilder.php(1539): CodeIgniter\Database\BaseConnection->query()
+#4 D:\xampp\htdocs\Job\system\Model.php(509): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\xampp\htdocs\Job\app\Controllers\Job.php(33): CodeIgniter\Model->countAllResults()
+#6 D:\xampp\htdocs\Job\system\CodeIgniter.php(825): App\Controllers\Job->index()
+#7 D:\xampp\htdocs\Job\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#8 D:\xampp\htdocs\Job\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#9 D:\xampp\htdocs\Job\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 D:\xampp\htdocs\Job\system\Commands\Server\rewrite.php(43): require_once('...')
+#11 {main}
+CRITICAL - 2025-06-04 14:02:37 --> Invalid file: /TipsKarir.php
+#0 D:\xampp\htdocs\Job\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 D:\xampp\htdocs\Job\system\Common.php(1089): CodeIgniter\View\View->render()
+#2 D:\xampp\htdocs\Job\app\Controllers\TipsKarir.php(9): view()
+#3 D:\xampp\htdocs\Job\system\CodeIgniter.php(825): App\Controllers\TipsKarir->index()
+#4 D:\xampp\htdocs\Job\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#5 D:\xampp\htdocs\Job\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#6 D:\xampp\htdocs\Job\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\Job\system\Commands\Server\rewrite.php(43): require_once('...')
+#8 {main}
+CRITICAL - 2025-06-04 14:04:55 --> Access level to App\Controllers\Job::$db must be protected (as in class App\Controllers\BaseController) or weaker
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

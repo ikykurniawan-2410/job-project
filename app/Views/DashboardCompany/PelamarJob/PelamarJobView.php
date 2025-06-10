@@ -39,6 +39,18 @@
                                 </svg>
                                 Lihat CV
                             </a>
+                            <form class="d-inline-block" action="/dashboard_company/call_interview" method="post">
+                                <?= csrf_field() ?>
+                                <input type="hidden" name="idPelamar" value="<?= $pelamar['idUser'] ?>">
+                                <input type="hidden" name="idJob" value="<?= $pelamar['idJob'] ?>">
+                                <button class="btn btn-primary" onclick="return confirm('Kirim panggilan interview ke pelamar ini?')">Panggil Interview</button>
+                            </form>
+                            <form class="d-inline-block" action="/dashboard_company/accept_pelamar" method="post">
+                                <?= csrf_field() ?>
+                                <input type="hidden" name="idPelamar" value="<?= $pelamar['idUser'] ?>">
+                                <input type="hidden" name="idJob" value="<?= $pelamar['idJob'] ?>">
+                                <button class="btn btn-success" onclick="return confirm('Terima pelamar ini di perusahaan?')">Terima</button>
+                            </form>
                         </td>
                     </tr>
                 <?php } ?>

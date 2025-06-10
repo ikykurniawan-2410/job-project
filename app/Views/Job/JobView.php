@@ -2,114 +2,176 @@
 
 <?= $this->section('content') ?>
 
-<input type="hidden" class="txt-csrfname" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
 <div class="job-view">
 
     <!-- Search Bar -->
-    <div class="search-bar d-grid align-items-center">
-        <div class="box-search">
-            <form action="<?= base_url('job/search') ?>" method="get">
-                <div class="d-flex flex-wrap gap-2 justify-content-center align-items-stretch">
-                    
-                    <!-- Input Search -->
-                    <div class="search position-relative d-flex bg-white align-items-center col-12 col-sm-7 p-1 rounded">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search ms-2 text-muted" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                        </svg>
-                        <input type="text" name="keyword" class="form-control border-0 ms-2" placeholder="Jabatan, kata kunci, perusahaan" value="<?= esc($keyword ?? '') ?>">
-                    </div>
+    <main>
+        <section
+            class="hero-section d-flex justify-content-center align-items-center"
+            id="section_1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h1 class="text-white text-center">Temukan. Lamar. Sukses.</h1>
+                        <h6 class="text-center">
+                            Portal kerja bagi pencari dan pemberi kerja.
+                        </h6>
 
-                    <!-- Tombol -->
-                    <div class="button col-12 col-sm-4 d-flex">
-                        <button type="submit" class="btn btn-outline-light text-white border-2 fw-medium w-50 h-100">
-                            Cari
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <div class="container my-5"></div>
-    <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-            <h2 class="mb-3 fw-bold">Bangun Karier Impianmu Bersama <span class="text-primary">JobStreet</span></h2>
-            <p class="lead mb-4">
-                Temukan lowongan yang sesuai dengan passion dan keahlianmu. Lamar hanya dalam hitungan klik!
-            </p>
-        </div>
-    </div>
-
-    <!-- Zig-Zag Section 1 -->
-    <div class="container my-5 py-4">
-        <div class="row align-items-center g-5">
-            <div class="col-md-6">
-                <img src="<?= base_url('assets/images/f1.jpg') ?>" alt="Cari Kerja" class="img-fluid rounded-4 shadow">
-            </div>
-            <div class="col-md-6">
-                <h3 class="fw-bold mb-3">Temukan Pekerjaan Impianmu</h3>
-                <p class="fs-5">
-                    Dengan fitur pencarian canggih, kamu bisa menemukan lowongan kerja yang sesuai dengan minat dan keahlianmu.<br>
-                    Proses pencarian jadi lebih mudah dan efisien!
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Zig-Zag Section 2 -->
-    <div class="container my-5 py-4">
-        <div class="row align-items-center g-5 flex-md-row-reverse">
-            <div class="col-md-6">
-                <img src="<?= base_url('assets/images/f2.jpg') ?>" alt="Lamar Mudah" class="img-fluid rounded-4 shadow">
-            </div>
-            <div class="col-md-6">
-                <h3 class="fw-bold mb-3">Lamar Mudah &amp; Cepat</h3>
-                <p class="fs-5">
-                    Cukup buat profil dan unggah CV, kamu bisa melamar ke banyak perusahaan hanya dengan beberapa klik.<br>
-                    Pantau status lamaranmu secara real-time!
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Info Cards -->
-    <div class="container my-5">
-        <div class="row text-center g-4 mt-4">
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body">
-                        <div class="mb-3" style="font-size:2rem;">🔎</div>
-                        <h5 class="card-title fw-semibold">Cari Lowongan</h5>
-                        <p class="card-text">Jelajahi ribuan lowongan kerja dari berbagai bidang dan perusahaan ternama.</p>
+                        <form
+                            action="<?= base_url('job/search') ?>"
+                            method="get"
+                            class="custom-form mt-4 pt-2 mb-lg-0 mb-5"
+                            role="search">
+                            <input type="hidden" class="txt-csrfname" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
+                            <div class="input-group input-group-lg">
+                                <span
+                                    class="input-group-text bi-search"
+                                    id="basic-addon1"></span>
+                                <input
+                                    name="keyword"
+                                    type="search"
+                                    class="form-control"
+                                    id="keyword"
+                                    placeholder="Jabatan, kata kunci, perusahaan"
+                                    aria-label="Search"
+                                    value="<?= esc($keyword ?? '') ?>" />
+                                <button type="submit" class="form-control">Cari</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body">
-                        <div class="mb-3" style="font-size:2rem;">📄</div>
-                        <h5 class="card-title fw-semibold">Lamar Mudah</h5>
-                        <p class="card-text">Buat profil, unggah CV, dan lamar pekerjaan hanya dengan beberapa klik.</p>
+        </section>
+    </main>
+
+    <section class="featured-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                    <div class="custom-block bg-white shadow-lg">
+                        <a href="topics-detail.html">
+                            <div class="d-flex">
+                                <div>
+                                    <h5 class="mb-2">Web Development</h5>
+                                    <p class="mb-0">
+                                        Temukan lowongan kerja di bidang pengembangan web dari berbagai perusahaan dan startup. Dapatkan kesempatan berkarier di industri teknologi.
+                                    </p>
+                                </div>
+                                <span class="badge bg-design rounded-pill ms-auto"><?= esc($webDevCount ?? 0) ?></span>
+                            </div>
+                            <img src="<?= base_url('img/undraw.jpg') ?>" class="custom-block-image img-fluid" alt="" />
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body">
-                        <div class="mb-3" style="font-size:2rem;">🏢</div>
-                        <h5 class="card-title fw-semibold">Untuk Perusahaan</h5>
-                        <p class="card-text">Pasang lowongan dan temukan kandidat terbaik untuk kebutuhan bisnismu.</p>
+
+                <div class="col-lg-6 col-12">
+                    <div class="custom-block custom-block-overlay">
+                        <div class="d-flex flex-column h-100">
+                            <img src="<?= base_url('img/bisnis.jpg') ?>" class="custom-block-image img-fluid" alt="" />
+
+
+                            <div class="custom-block-overlay-text d-flex">
+                                <div>
+                                    <h5 class="text-white mb-2">Jelajahi Perusahaan</h5>
+                                    <p class="text-white">
+                                        Kenali perusahaan incaranmu sebelum melamar. Yuk, jelajahi sekarang!
+                                    </p>
+                                    <a
+                                        href="topics-detail.html"
+                                        class="btn custom-btn mt-2 mt-lg-3">Telusuri Sekarang</a>
+                                </div>
+                                <span class="badge bg-finance rounded-pill ms-auto"><?= esc($companyCount ?? 0) ?></span>
+                            </div>
+
+                            <div class="social-share d-flex">
+                                <p class="text-white me-4">Share:</p>
+                                <ul class="social-icon">
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-twitter"></a>
+                                    </li>
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link bi-facebook"></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="section-overlay"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col text-center">
-                <a href="/login_user" class="btn btn-primary btn-lg px-5 shadow">Daftar Sekarang</a>
+    </section>
+
+    <section class="faq-section section-padding bg-white" id="section_4">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                    <h2 class="mb-4">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="col-lg-5 col-12">
+                    <img src="img/faq.jpg" class="img-fluid" alt="FAQs">
+                </div>
+
+                <div class="col-lg-6 col-12 m-auto">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What is Topic Listing?
+                                </button>
+                            </h2>
+
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Sistem ini adalah platform digital yang menyediakan informasi mengenai lowongan kerja dari berbagai perusahaan dan bidang. Tujuannya adalah untuk menghubungkan pencari kerja dengan perusahaan secara mudah dan cepat melalui satu platform online.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Bagaimana cara melamar pekerjaan melalui website ini?
+
+                                </button>
+                            </h2>
+
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Pengguna dapat membuat akun terlebih dahulu, lalu memilih lowongan yang sesuai. Setelah itu, cukup klik tombol "Lamar" dan ikuti instruksi pengunggahan CV atau data lainnya yang dibutuhkan oleh perusahaan.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Apakah menggunakan layanan ini berbayar?
+                                </button>
+                            </h2>
+
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Tidak. Semua fitur yang tersedia di website ini dapat digunakan secara gratis, baik oleh pencari kerja maupun perusahaan yang ingin memposting lowongan.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
+    </section>
+
+
+
+
+
 
     <!-- Footer -->
     <div style="min-height: 300px; background-color: rgb(36, 54, 80)">
@@ -149,7 +211,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 <?= $this->endSection() ?>

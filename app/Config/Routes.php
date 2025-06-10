@@ -45,6 +45,8 @@ $routes->post('/signupCompany', 'RegistrationCompany::registrationCompany');
 $routes->get('/job', 'Job::index');
 $routes->post('/apply_job','Job::applyJob');
 $routes->post('/detail_job', 'Job::detailJob');
+$routes->get('/TipsKarir', 'TipsKarir::index');
+
 
 $routes->get('/dashboard_user', 'UserDashboard::index', ['filter' => 'UserFilter']);
 $routes->get('/dashboard_user/profile', 'UserDashboard::user', ['filter' => 'UserFilter']);
@@ -69,7 +71,8 @@ $routes->post('/getLowongan', 'CompanyDashboard::getLowongan', ['filter' => 'Com
 $routes->post('/changeLowongan', 'CompanyDashboard::changeLowongan', ['filter' => 'CompanyFilter']);
 $routes->post('/deleteLowongan', 'CompanyDashboard::deleteLowongan', ['filter' => 'CompanyFilter']);
 $routes->post('/dashboard_company/download_cv', 'CompanyDashboard::downloadCV', ['filter' => 'CompanyFilter']);
-
+$routes->post('/dashboard_company/call_interview', 'CompanyDashboard::call_interview');
+$routes->post('/dashboard_company/accept_pelamar', 'CompanyDashboard::accept_pelamar');
 
 
 $routes->get('job/search', 'Job::search');

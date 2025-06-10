@@ -9,10 +9,10 @@
         </div>
         <div class="header-preview-job bg-white p-2 rounded-1">
             <div class="mb-2">
-                <img class="rounded-circle" style="max-width: 50px; max-height: 50px" src="/<?= $companyDetail['profileCompany'] ?>" alt="">
-                <span class="align-middle fw-bold">PT. Anugrah Jaya Abadi</span>
+                <img class="rounded-circle" style="max-width: 50px; max-height: 50px" src="/<?= esc($companyDetail['profileCompany']) ?>" alt="">
+                <span class="align-middle fw-bold"><?= esc($companyDetail['namaCompany']) ?></span>
             </div>
-            <span class="mt-4 fs-5 d-block">Front End Developer</span>
+            <span class="mt-4 fs-5 d-block"><?= esc($detailJob['namaJob']) ?></span>
             <?php require_once(APPPATH . 'CustomFunctions/TimeAgo.php')?>
             <span style="font-size: 0.8rem" class="fw-normal"><?= 'Posted ' . facebook_time_ago($detailJob['updated_at']) ?></span>
         </div>
