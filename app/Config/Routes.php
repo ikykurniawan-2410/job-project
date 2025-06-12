@@ -59,6 +59,7 @@ $routes->post('/dashboard_user/get_email', 'UserDashboard::getEmail', ['filter' 
 $routes->post('/dashboard_user/get_new_cv', 'UserDashboard::getNewCV', ['filter' => 'UserFilter']);
 $routes->post('/dashboard_user/delete_my_application', 'UserDashboard::deleteMyApplication', ['filter' => 'UserFilter']);
 $routes->get('/dashboard_user/change_cv/(:segment)', 'UserDashboard::changeCV/$1', ['filter' => 'UserFilter']);
+$routes->get('/dashboard_user/status_lamaran', 'UserDashboard::statusLamaran');
 
 $routes->get('/dashboard_company', 'CompanyDashboard::index', ['filter' => 'CompanyFilter']);
 $routes->get('/dashboard_company/change_description_job/(:segment)', 'CompanyDashboard::changeDescription/$1', ['filter' => 'CompanyFilter']);
@@ -71,8 +72,8 @@ $routes->post('/getLowongan', 'CompanyDashboard::getLowongan', ['filter' => 'Com
 $routes->post('/changeLowongan', 'CompanyDashboard::changeLowongan', ['filter' => 'CompanyFilter']);
 $routes->post('/deleteLowongan', 'CompanyDashboard::deleteLowongan', ['filter' => 'CompanyFilter']);
 $routes->post('/dashboard_company/download_cv', 'CompanyDashboard::downloadCV', ['filter' => 'CompanyFilter']);
-$routes->post('/dashboard_company/call_interview', 'CompanyDashboard::call_interview');
-$routes->post('/dashboard_company/accept_pelamar', 'CompanyDashboard::accept_pelamar');
+$routes->post('/dashboard_company/call_interview', 'DashboardCompany::call_interview');
+$routes->post('/dashboard_company/accept_pelamar', 'DashboardCompany::accept_pelamar');
 
 
 $routes->get('job/search', 'Job::search');

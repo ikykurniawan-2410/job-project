@@ -13,7 +13,7 @@ class CVModel extends Model
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['idCV', 'idUser', 'idJob', 'idResume'];
+    protected $allowedFields = ['idCV', 'idUser', 'idJob', 'idResume', 'status'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';

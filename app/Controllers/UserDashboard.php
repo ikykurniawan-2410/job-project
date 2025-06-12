@@ -197,4 +197,20 @@ class UserDashboard extends BaseController
         $convertResponse['email'] = $this->userModel->where('idUser', session()->get('idUser'))->first()['email'];
         return $convertResponse['score'] >= 0.5 ? json_encode($convertResponse) : json_encode("FAILS");
     }
+
+    //sratus lamaran
+    public function statusLamaran()
+    {
+        $data = [
+            'title' => 'Status Lamaran | JobStreet.co.id',
+            'listLamaran' => $this->cvModel
+                ->join('job_desk', 'job_desk.idJob = cv.idJob')
+                ->join('company', 'company.idCompany = job_desk.idCompany')
+                ->where('cv.idUser', session()->get('idUser'))
+                ->select('cv.*, job_desk.namaJob as namaLowongan, company.namaCompany as namaPerusahaan')
+                ->findAll(),
+            'detailUser' => $this->userModel->where('idUser', session()->get('idUser'))->first(),
+        ];
+        return view('DashboardUser/ProfileUser/StatusLamaranView', $data);
+    }
 }

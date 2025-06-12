@@ -5,9 +5,13 @@ if (!isset($detailUser) && session()->get('idUser')) {
 }
 ?>
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="container-fluid gap-3">
-        <a class="navbar-brand" href="/Job">
-            <img src="<?= base_url() ?>/icons/logo-jobstreet-my-1.png" alt="">
+    <div class="container-fluid gap-3 align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="/Job">
+            <img 
+    src="<?= base_url() ?>/icons/logo-removebg-preview.png" 
+    alt="Logo" 
+    style="height:56px; max-width:180px; object-fit:contain;" 
+    class="d-inline-block align-middle img-fluid">
         </a>
         <button class="navbar-toggler text-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             Menu
