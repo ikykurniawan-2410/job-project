@@ -1,44 +1,111 @@
 <?= $this->extend('LayoutHome/LayoutHomeView') ?>
-
 <?= $this->section('content') ?>
-    <div style="min-height: 1200px" class="row dashboard-user">
-        <div class="col-3 d-grid justify-content-center" style="background-color: #0D3880;">
-            <ul class="menu-dashboard text-white fs-5 mt-5">
-                <li class="mb-3">
-                    <a class="text-white text-decoration-none" href="/dashboard_user/profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-white mx-1 bi bi-person-circle" viewBox="0 0 16 16">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                        </svg>
-                        Profile</a>
-                </li>
-                <li class="mb-3">
-                    <a class="text-white text-decoration-none" href="/dashboard_user/my_application">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-white mx-1 bi bi-pen" viewBox="0 0 16 16">
-                            <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
-                        </svg>
-                        Lamaran Saya</a>
-                </li>
-                <li class="mb-3">
-                    <a class="text-white text-decoration-none" href="/dashboard_user/resume_cv">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-white mx-1 bi bi-file-earmark-person" viewBox="0 0 16 16">
-                            <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
-                        </svg>
-                        CV Saya</a>
-                </li>
-                <li class="mb-3">
-                    <a class="text-white text-decoration-none" href="/dashboard_user/status_lamaran">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="text-white mx-1 bi bi-file-earmark-person" viewBox="0 0 16 16">
-                            <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
-                        </svg>
-                        Status Lamaran</a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-8">
-            <?= $this->renderSection('content') ?>
-        </div>
+
+
+<style>
+    .dashboard-layout {
+        min-height: 100vh;
+        display: flex;
+        overflow: hidden;
+        background-color: #f0f4fc; /* warna background konten */
+    }
+
+    .sidebar {
+        width: 260px;
+        background-color: #fff;
+        color: #4a5c82;
+        padding: 1.5rem 1rem;
+        border-right: 1px solid #eee;
+    }
+
+    .sidebar a {
+        color: #0E565B;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+        background-color: #E7F0FD;
+    }
+
+    .sidebar svg {
+        flex-shrink: 0;
+    }
+
+    .menu-section {
+        margin-bottom: 1rem;
+    }
+
+    .menu-section h6 {
+        font-size: 0.9rem;
+        margin: 1rem 1rem 0.5rem;
+        color: #999;
+    }
+
+    .content-area {
+        flex: 1;
+        padding: 2rem;
+        overflow: auto;
+    }
+
+    .dropdown-toggle::after {
+        margin-left: auto;
+        transform: rotate(90deg);
+    }
+
+    .submenu {
+        padding-left: 2.5rem;
+        display: none;
+        flex-direction: column;
+    }
+
+    .submenu a {
+        font-size: 0.95rem;
+    }
+
+    .dropdown.open .submenu {
+        display: flex;
+    }
+</style>
+
+<div class="dashboard-layout">
+    <div class="sidebar">
+        <ul class="list-unstyled fs-6">
+            <li class="mb-2">
+                <a href="/dashboard_user/profile">
+                    <i class="bi bi-person-circle"></i> Profile
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="/dashboard_user/my_application">
+                    <i class="bi bi-pen"></i> Lamaran Saya
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="/dashboard_user/resume_cv">
+                    <i class="bi bi-person-badge-fill"></i> CV Saya
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="/dashboard_user/status_lamaran">
+                    <i class="bi bi-card-checklist"></i> Status Lamaran
+                </a>
+            </li>
+        </ul>
     </div>
+
+    <div class="content-area">
+        <?= $this->renderSection('content') ?>
+    </div>
+</div>
+
+<!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 <?= $this->endSection() ?>

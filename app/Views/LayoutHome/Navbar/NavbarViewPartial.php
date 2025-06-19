@@ -4,91 +4,130 @@ if (!isset($detailUser) && session()->get('idUser')) {
     $detailUser = $userModel->where('idUser', session()->get('idUser'))->first();
 }
 ?>
-<nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="container-fluid gap-3 align-items-center">
+
+<style>
+    .custom-navbar {
+        padding: 0.5rem 1rem;
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-brand {
+        margin-right: 1.5rem;
+        display: flex;
+        align-items: center;
+        height: 56px;
+    }
+
+    .navbar-brand img.navbar-logo {
+        height: 80px;
+        transform: scale(1.3);
+        transform-origin: left center;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 16px;
+        color: rgb(85, 95, 96);
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-link.active {
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+    }
+
+    .user-photo {
+        width: 36px;
+        height: 36px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .small-text {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .logout-btn svg {
+        vertical-align: middle;
+    }
+
+    .custom-outline {
+        color: #0d6efd;
+        border: 1px solid #0d6efd;
+        background-color: transparent;
+        border-radius: 0.5rem;
+        padding: 0.8rem .9rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .custom-outline:hover {
+        background-color: rgba(13, 110, 253, 0.1);
+        color: #0d6efd;
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top custom-navbar">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
         <a class="navbar-brand d-flex align-items-center" href="/Job">
-            <img 
-    src="<?= base_url() ?>/icons/logo-removebg-preview.png" 
-    alt="Logo" 
-    style="height:56px; max-width:180px; object-fit:contain;" 
-    class="d-inline-block align-middle img-fluid">
+            <img src="<?= base_url('icons/logo2.png') ?>" alt="Logo" class="navbar-logo">
         </a>
-        <button class="navbar-toggler text-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-dark bi bi-chevron-down" viewBox="0 0 16 16">
+
+        <button class="navbar-toggler text-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-dark bi bi-chevron-down">
                 <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-up d-none" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
-            </svg>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul style="color: rgb(85,95,96)" class="navbar-nav link-one">
+            <ul class="navbar-nav me-auto align-items-center">
+                <?php
+                $uri = service('uri');
+                $isProfile = in_array($uri->getSegment(1), ['dashboard_user', 'profile_user']);
+                $isJob = $uri->getSegment(1) === 'job';
+                ?>
                 <li class="nav-item">
-                    <?php
-                    $uri = service('uri');
-                    $isProfile = in_array($uri->getSegment(1), ['dashboard_user', 'profile_user']);
-                    $isJob = $uri->getSegment(1) === 'job';
-                    ?>
-                    <a class="nav-link align-middle<?= $isJob ? ' active' : '' ?>" aria-current="page" href="/job">Cari Lowongan</a>
+                    <a class="nav-link<?= $isJob ? ' active' : '' ?>" href="/job">Cari Lowongan</a>
                 </li>
-                <li class="nav-item menu-responsive-two">
+                <li class="nav-item">
                     <?php if (session()->get('idUser')): ?>
                         <a class="nav-link<?= $isProfile ? ' active' : '' ?>" href="<?= base_url('dashboard_user') ?>">Profil Saya</a>
                     <?php else: ?>
                         <a class="nav-link" href="<?= base_url('loginUser') ?>">Profil Saya</a>
                     <?php endif; ?>
                 </li>
-                <li class="nav-item menu-responsive-two">
+                <li class="nav-item">
                     <a class="nav-link" href="#">Telusuri Perusahaan</a>
                 </li>
-                <li class="nav-item menu-responsive-two">
+                <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('TipsKarir') ?>">Tips Karir</a>
-                </li>
-
-                <li class="nav-item menu-responsive">
-                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Lainnya
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="nav-link active align-middle" aria-current="page" href="/job">Cari Lowongan</a></li>
-                        <li><a class="nav-link" href="#">My Jobstreet</a></li>
-                        <li><a class="nav-link" href="#">Profil Perusahaan</a></li>
-                    </ul>
                 </li>
             </ul>
 
-            <ul class="navbar-nav link-two ms-auto position-relative align-items-center mx-3">
-                <?php if (!session()->get('idUser')) { ?>
-
-                <?php } ?>
-                <li class="nav-item d-flex align-items-center gap-1">
-                    <?php if (session()->get('idUser')) { ?>
-                        <img style="width: 25px; height: 25px" class="img-thumbnail rounded-circle" src="<?= base_url() ?>/<?= $detailUser['photo_profile'] ?>" alt="">
-                        <span><?= session()->get('nama') ?></span>|
-                        <a class="text-decoration-none text-dark" title="Dashboard User" href="/dashboard_user">
-
-                        </a>
-                        <form action="/login_user/logout" method="post">
+            <ul class="navbar-nav align-items-center">
+                <?php if (session()->get('idUser')): ?>
+                    <li class="nav-item d-flex align-items-center gap-2">
+                        <img src="<?= base_url($detailUser['photo_profile']) ?>" alt="Foto Profil" class="user-photo">
+                        <span class="small-text"><?= session()->get('nama') ?></span>
+                        <span class="mx-1">|</span>
+                        <form action="/login_user/logout" method="post" class="d-inline logout-btn">
                             <input type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
-                            <button type="submit" class="btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
-                                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
-                                </svg>
+                            <button type="submit" class="btn p-0 border-0 bg-transparent" title="Logout">
+                                <i class="fas fa-sign-out-alt fa-lg"></i>
                             </button>
                         </form>
-                    <?php } else { ?>
-                <li class="nav-item company">
-                    <a style="color: rgb(73,100,234)" class="nav-link color" href="<?= base_url() ?>/login_user">Masuk</a>
-                </li>
-            <?php } ?>
-            </li>
-            <?php if (!session()->get('idUser')) { ?>
-                <li>
-                    <a style="color: rgb(73,100,234)" class="nav-link color" href="<?= base_url() ?>/registration_company">Perusahaan</a>
-                </li>
-            <?php } ?>
+                    </li>
+                <?php else: ?>
+                    <li class="nav-item me-2">
+                        <a class="btn custom-outline" href="<?= base_url() ?>/login_user">Masuk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="<?= base_url() ?>/registration_company">Perusahaan</a>
+                    </li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>

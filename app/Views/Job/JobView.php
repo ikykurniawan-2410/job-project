@@ -4,6 +4,8 @@
 
 <div class="job-view">
 
+
+
     <!-- Search Bar -->
     <main>
         <section
@@ -67,9 +69,7 @@
                 <div class="col-lg-6 col-12">
                     <div class="custom-block custom-block-overlay">
                         <div class="d-flex flex-column h-100">
-                            <img src="<?= base_url('img/bisnis.jpg') ?>" class="custom-block-image img-fluid" alt="" />
-
-
+                            <img src="<?= base_url('img/logo.jpg') ?>" class="custom-block-image img-fluid" alt="" />
                             <div class="custom-block-overlay-text d-flex">
                                 <div>
                                     <h5 class="text-white mb-2">Jelajahi Perusahaan</h5>
@@ -167,50 +167,49 @@
             </div>
         </div>
     </section>
+    <!-- footer -->
+    <footer style="background-color: #243650; padding: 60px 0;">
+        <div class="container text-white">
+            <div class="row align-items-start mx-auto gx-5" style="max-width: 1140px;">
 
+                <!-- Kolom 1 -->
+                <div class="col-lg-3 col-md-6 mb-4 position-relative" style="height: 153px;">
+                    <div class="position-relative" style="width: 224px; height: 152px;">
+                        <img src="<?= base_url('icons/logo2.png') ?>" alt="SimKerja" style="position: absolute; width: 180px; height: 71px; top: 0; left: 0; object-fit: cover;">
+                        <p style="position: absolute; width: 189px; top: 70px; left: 16px; font-family: 'Inter-Bold', Helvetica, sans-serif; font-weight: 700; color: #ffffff; font-size: 11px; letter-spacing: -0.11px; line-height: 24px; margin: 0;">
+                            Platform pencari kerja terpercaya untuk membantu kamu menemukan karier impian.
+                        </p>
+                    </div>
+                </div>
 
+                <!-- Navigasi -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-4" style="color: #ffff;">Navigasi</h5>
+                    <a href="#" class="d-block text-decoration-none text-white mb-3">Cari Lowongan</a>
+                    <a href="#" class="d-block text-decoration-none text-white mb-3">Telusuri Perusahaan</a>
+                    <a href="#" class="d-block text-decoration-none text-white mb-3">Tips Karir</a>
+                </div>
 
+                <!-- Bantuan -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-4" style="color: #ffff;">Bantuan</h5>
+                    <a href="#" class="d-block text-decoration-none text-white mb-3">FAQ</a>
+                    <a href="#" class="d-block text-decoration-none text-white mb-3">Hubungi Kami</a>
+                </div>
 
+                <!-- Sosial Media -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-4" style="color: #ffff;">Sosial Media</h5>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-xl"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-xl"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-google fa-xl"></i></a>
+                </div>
 
-
-    <!-- Footer -->
-    <div style="min-height: 300px; background-color: rgb(36, 54, 80)">
-        <div style="min-height: inherit !important; width: 85%;" class="footer-registration-company mx-auto">
-            <div>
-                <p style="color: white">Perusahaan</p>
-                <a class="d-block text-decoration-none text-muted" href="#">Beranda</a>
-                <a class="d-block text-decoration-none text-muted" href="#">Berpartner dengan kami</a>
-                <a class="d-block text-decoration-none text-muted" href="#">Harga & Paket</a>
-            </div>
-            <div>
-                <p style="color: white">Produk dan layanan</p>
-                <a class="d-block text-decoration-none text-muted" href="#">Iklan lowongan</a>
-                <a class="d-block text-decoration-none text-muted" href="#">Iklan lowongan bintang 5</a>
-                <a class="d-block text-decoration-none text-muted" href="#">Talent Search</a>
-                <a class="d-block text-decoration-none text-muted" href="#">SiVA Recruitment Centre</a>
-                <a class="d-block text-decoration-none text-muted" href="#">Layanan Branding Perusahaan</a>
-            </div>
-            <div>
-                <p style="color: white">Bantuan</p>
-                <a class="d-block text-decoration-none text-muted" href="#">Help Centre</a>
-                <a class="d-block text-decoration-none text-muted" href="#">Hubungi kami</a>
-            </div>
-            <div>
-                <p style="color: white">Informasi lainnya</p>
-                <a class="d-block text-decoration-none text-muted" href="#">Laws of Attraction</a>
-                <a class="d-block text-decoration-none text-muted" href="#">Artikel</a>
-                <a class="d-block text-decoration-none text-muted" href="#">Testimoni</a>
-            </div>
-            <div>
-                <p style="color: white">Temukan kami di</p>
-                <a class="text-decoration-none" href="#"><img src="/icons/facebook-logo.png" alt=""></a>
-                <a class="text-decoration-none" href="#"><img src="/icons/twitter.png" alt=""></a>
-                <a class="text-decoration-none" href="#"><img src="/icons/youtube.png" alt=""></a>
-                <a class="text-decoration-none" href="#"><img src="/icons/linkedin.png" alt=""></a>
-                <a class="text-decoration-none" href="#"><img src="/icons/instagram.png" alt=""></a>
             </div>
         </div>
-    </div>
+    </footer>
+<!-- footer end -->
+
 </div>
 
 <?= $this->endSection() ?>

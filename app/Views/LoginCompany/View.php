@@ -135,54 +135,42 @@
             </div>
         </div>
 
-        <div style="min-height: 300px; background-color: rgb(51,51,51)">
-            <div style="min-height: inherit !important; width: 85%;"
-                 class="footer-registration-company mx-auto">
-                <div>
-                    <p style="color: white">Perusahaan</p>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Beranda</a>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Berpartner dengan kami</a>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Harga & Paket</a>
-                </div>
-                <div>
-                    <p style="color: white">Produk dan layanan</p>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Iklan lowongan</a>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Iklan lowongan bintang 5</a>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Talent Search</a>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">SiVA Recruitment Centre</a>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Layanan Branding Perusahaan</a>
-                </div>
-                <div>
-                    <p style="color: white">Bantuan</p>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Help Centre</a>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Hubungi kami</a>
-                </div>
-                <div>
-                    <p style="color: white">Informasi lainnya</p>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Laws of Attraction</a>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Artikel</a>
-                    <a style="color: rgb(146,146,146)" class="d-block text-decoration-none" href="#">Testimoni</a>
-                </div>
-                <div>
-                    <p style="color: white">Temukan kami di</p>
-                    <a style="color: rgb(146,146,146)" class="text-decoration-none" href="#">
-                        <img src="/icons/facebook-logo.png" alt="">
-                    </a>
-                    <a style="color: rgb(146,146,146)" class="text-decoration-none" href="#">
-                        <img src="/icons/twitter.png" alt="">
-                    </a>
-                    <a style="color: rgb(146,146,146)" class="text-decoration-none" href="#">
-                        <img src="/icons/youtube.png" alt="">
-                    </a>
-                    <a style="color: rgb(146,146,146)" class="text-decoration-none" href="#">
-                        <img src="/icons/linkedin.png" alt="">
-                    </a>
-                    <a style="color: rgb(146,146,146)" class="text-decoration-none" href="#">
-                        <img src="/icons/instagram.png" alt="">
-                    </a>
-                </div>
+        <!-- Footer -->
+<footer style="background-color: #243650; padding: 40px 0;">
+    <div class="container text-white">
+        <div class="row">
+            <!-- Logo dan Deskripsi -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <img src="<?= base_url('icons/logo-simkerja.png') ?>" alt="SimKerja" style="height: 40px;" />
+                <p class="mt-3">Platform pencari kerja terpercaya<br>untuk membantu kamu<br>menemukan karier impian.</p>
+            </div>
+
+            <!-- Navigasi -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5>Navigasi</h5>
+                <a href="#" class="d-block text-decoration-none text-light">Cari Lowongan</a>
+                <a href="#" class="d-block text-decoration-none text-light">Telusuri Perusahaan</a>
+                <a href="#" class="d-block text-decoration-none text-light">Tips Karir</a>
+            </div>
+
+            <!-- Bantuan -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5>Bantuan</h5>
+                <a href="#" class="d-block text-decoration-none text-light">FAQ</a>
+                <a href="#" class="d-block text-decoration-none text-light">Hubungi Kami</a>
+            </div>
+
+            <!-- Sosial Media -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Sosial Media</h5>
+                <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-google"></i></a>
             </div>
         </div>
+    </div>
+</footer>
+
     </div>
 </div>
 <?= $this->endSection() ?>

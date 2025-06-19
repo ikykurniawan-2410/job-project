@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="<?= base_url() ?>/icons/images.jfif" />
+    <link rel="icon" href="<?= base_url() ?>icons/logo2.png" />
     <!-- Bootstrap CSS -->
     <link href="<?= base_url() ?>/css/bootstrap.min.css" rel="stylesheet" />
     <link href="<?= base_url() ?>/css/bootstrap-icons.css" rel="stylesheet" />
@@ -29,6 +29,7 @@
     <script src="<?= base_url() ?>/js/click-scroll.js"></script> <!-- Script custom -->
     <script src="<?= base_url() ?>/js/custom.js"></script>
     <script src="<?= base_url() ?>/js/LayoutHomeView.js"></script>
+    
 
     <!-- Fix di click-scroll.js, pastikan cek elemen target -->
     <script>

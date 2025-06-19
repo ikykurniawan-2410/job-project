@@ -4,7 +4,10 @@
 <?= $this->extend('DashboardUser/DashboardLayout') ?>
 <?= $this->section('content') ?>
 <div class="container mt-5">
-    <h3>Status Lamaran Saya</h3>
+    <div class="navbar-cv d-flex align-items-center justify-content-center mx-auto">
+        <h3>Status Lamaran Saya</h3>
+    </div>
+
     <div class="table-responsive mt-3">
         <table class="table">
             <thead>
@@ -15,22 +18,22 @@
                 </tr>
             </thead>
             <tbody>
-            <?php foreach ($listLamaran as $lamaran): ?>
-                <tr>
-                    <td><?= esc($lamaran['namaLowongan']) ?></td>
-                    <td><?= esc($lamaran['namaPerusahaan']) ?></td>
-                    <td>
-                        <?php $status = $lamaran['status'] ?? 'pending'; ?>
-                        <?php if ($status == 'dipanggil_interview'): ?>
-                            <span class="badge bg-warning text-dark">Dipanggil Interview</span>
-                        <?php elseif ($status == 'diterima'): ?>
-                            <span class="badge bg-success">Diterima</span>
-                        <?php else: ?>
-                            <span class="badge bg-secondary">Menunggu</span>
-                        <?php endif; ?>
-                    </td>
-                </tr>
-            <?php endforeach ?>
+                <?php foreach ($listLamaran as $lamaran): ?>
+                    <tr>
+                        <td><?= esc($lamaran['namaLowongan']) ?></td>
+                        <td><?= esc($lamaran['namaPerusahaan']) ?></td>
+                        <td>
+                            <?php $status = $lamaran['status'] ?? 'pending'; ?>
+                            <?php if ($status == 'dipanggil_interview'): ?>
+                                <span class="badge bg-warning text-dark">Dipanggil Interview</span>
+                            <?php elseif ($status == 'diterima'): ?>
+                                <span class="badge bg-success">Diterima</span>
+                            <?php else: ?>
+                                <span class="badge bg-secondary">Menunggu</span>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                <?php endforeach ?>
             </tbody>
         </table>
     </div>
