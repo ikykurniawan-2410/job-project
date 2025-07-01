@@ -20,13 +20,18 @@ class CompanyDashboard extends BaseController
         $this->db = \Config\Database::connect();
         $this->data = [
             'title' => 'Dashboard Company',
-            'companyDetail' => $this->companyModel->where('idCompany', session()->get('id_company'))->first()
+            'companyDetail' => $this->companyModel->where('id', session()->get('idCompany'))->first()
         ];
     }
 
     public function index()
     {
-        $this->data['listJob'] = $this->jobDeskModel->where('idCompany', session()->get('id_company'))->findAll();
+
+        // Cek session
+        if (!session()->get('idCompany')) {
+            return redirect()->to('/login_company');
+        }
+        $this->data['listJob'] = $this->jobDeskModel->where('idCompany', session()->get('idCompanyStr'))->findAll();
         return view('DashboardCompany/Home/HomeView', $this->data);
     }
 
@@ -84,10 +89,8 @@ class CompanyDashboard extends BaseController
     }
 
     public function logoutCompany() {
-        if (session()->has('id_company')) {
-            unset($_SESSION['id_company']);
-            return redirect()->to('/login_company');
-        }
+        session()->remove('idCompany');
+        return redirect()->to('/login_company');
     }
 
     public function deleteLowongan() {
@@ -129,7 +132,7 @@ class CompanyDashboard extends BaseController
 
     public function previewJob($seg1, $seg2) {
         $query = [
-            'idCompany' => session()->get('id_company'),
+            'idCompany' => session()->get('idCompany'),
             'idJob' => $seg1
         ];
         $this->data['detailJob'] = $this->jobDeskModel->where($query)->first();
@@ -160,9 +163,10 @@ class CompanyDashboard extends BaseController
             $deskripsi = $this->request->getPost('deskripsi');
 
             try {
+                // var_dump(session()->get('idCompanyStr')); exit;
                 $this->jobDeskModel->insert([
                     'idJob' => 'JOB - ' . uniqid(),
-                    'idCompany' => session()->get('id_company'),
+                    'idCompany' => session()->get('idCompanyStr'), // harus varchar, bukan integer/null
                     'namaJob' => $namaLowongan,
                     'deskripsiJob' => $deskripsi
                 ]);

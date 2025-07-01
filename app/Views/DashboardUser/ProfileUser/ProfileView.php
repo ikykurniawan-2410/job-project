@@ -1,31 +1,35 @@
+
 <?= $this->extend('DashboardUser/DashboardLayout') ?>
 
 <?= $this->section('content') ?>
+<?php var_dump(session()->get('idUser')); ?>
 <div class="d-grid justify-content-center">
     <div class="profile-user text-center">
-        <div>
-            <img
-                style="width: 250px; height: 250px; object-fit:cover;"
-                src="<?= base_url() ?>/<?= $profileUser['photo_profile'] ?>" class="img-thumbnail" alt="Photo Profile">
-        </div>
-        <div class="mx-auto d-grid justify-content-center">
-            <p class="fs-3 fw-bold mb-1"><?= esc($profileUser['nama']) ?></p>
-            <p class="mb-1 text-center"><?= esc($profileUser['username']) ?></p>
-            <p class="text-center">
-                <?= str_replace(
-                    substr($profileUser['email'], 0, 5),
-                    str_repeat('*', strlen($profileUser['email'])),
-                    $profileUser['email']
-                ) ?>
-            </p>
-        </div>
-        <input class="csrf-token" type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
-        <div class="d-grid justify-content-center">
-            <div class="input-group input-group-sm mb-3">
-                <input disabled type="hidden" class="form-control email" value="<?= esc($profileUser['email']) ?>" aria-label="Email">
+        <?php if ($profileUser): ?>
+            <div>
+                <img
+                    style="width: 250px; height: 250px; object-fit:cover;"
+                    src="<?= base_url() ?>/<?= $profileUser['photo_profile'] ?>" class="img-thumbnail" alt="Photo Profile">
             </div>
-            <button type="button" onclick="showEmail(this)" class="btn btn-primary mx-auto">Show Email</button>
-        </div>
+            <div class="mx-auto d-grid justify-content-center">
+                <p class="fs-3 fw-bold mb-1"><?= esc($profileUser['nama']) ?></p>
+                <p class="mb-1 text-center"><?= esc($profileUser['username']) ?></p>
+                <p class="text-center">
+                    <?= str_replace(
+                        substr($profileUser['email'], 0, 5),
+                        str_repeat('*', strlen($profileUser['email'])),
+                        $profileUser['email']
+                    ) ?>
+                </p>
+            </div>
+            <input class="csrf-token" type="hidden" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
+            <div class="d-grid justify-content-center">
+                <div class="input-group input-group-sm mb-3">
+                    <input disabled type="hidden" class="form-control email" value="<?= esc($profileUser['email']) ?>" aria-label="Email">
+                </div>
+                <button type="button" onclick="showEmail(this)" class="btn btn-primary mx-auto">Show Email</button>
+            </div>
+        <?php endif; ?>
     </div>
 </div>
 

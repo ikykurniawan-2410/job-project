@@ -13,10 +13,14 @@ class CompanyModel extends Model
 
     protected $returnType     = 'array';
 
-    protected $allowedFields = ['idCompany', 'profileCompany', 'namaCompany', 'emailCompany', 'passwordCompany','handphoneCompany', 'alamat'];
+    protected $allowedFields = ['idCompany', 'profileCompany', 'namaCompany', 'emailCompany', 'passwordCompany', 'handphoneCompany', 'alamat', 'status'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
+    public function getCompanyByEmail($email)
+    {
+        return $this->where('emailCompany', $email)->first();
+    }
 }

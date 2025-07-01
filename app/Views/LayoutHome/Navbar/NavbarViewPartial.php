@@ -100,9 +100,6 @@ if (!isset($detailUser) && session()->get('idUser')) {
                     <?php endif; ?>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Telusuri Perusahaan</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('TipsKarir') ?>">Tips Karir</a>
                 </li>
             </ul>
@@ -110,7 +107,7 @@ if (!isset($detailUser) && session()->get('idUser')) {
             <ul class="navbar-nav align-items-center">
                 <?php if (session()->get('idUser')): ?>
                     <li class="nav-item d-flex align-items-center gap-2">
-                        <img src="<?= base_url($detailUser['photo_profile']) ?>" alt="Foto Profil" class="user-photo">
+                        <img src="<?= base_url(isset($detailUser['photo_profile']) && $detailUser['photo_profile'] ? $detailUser['photo_profile'] : 'icons/default-user.png') ?>" alt="Foto Profil" class="user-photo">
                         <span class="small-text"><?= session()->get('nama') ?></span>
                         <span class="mx-1">|</span>
                         <form action="/login_user/logout" method="post" class="d-inline logout-btn">
@@ -132,3 +129,4 @@ if (!isset($detailUser) && session()->get('idUser')) {
         </div>
     </div>
 </nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

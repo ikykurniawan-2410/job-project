@@ -27,6 +27,7 @@ class Filters extends BaseConfig
         'CompanyFilter' => \App\Filters\CompanyFilter::class,
         'LoginFilter' => \App\Filters\LoginFilter::class,
         'LoginFilterCompany' => \App\Filters\LoginFilterCompany::class,
+        'AdminFilter' => \App\Filters\AdminFilter::class,
     ];
 
     /**

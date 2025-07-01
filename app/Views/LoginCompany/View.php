@@ -15,6 +15,9 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         <?php } ?>
+                        <?php if(session()->getFlashdata('error')): ?>
+                            <div class="alert alert-warning"><?= session()->getFlashdata('error') ?></div>
+                        <?php endif; ?>
 
                         <span class="mb-2">
                                 <span style="color: rgb(230,2,133)">Nikmati pasang 1 iklan lowongan GRATIS untuk pengguna perdana</span>.

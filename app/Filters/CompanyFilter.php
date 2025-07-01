@@ -10,8 +10,8 @@ class CompanyFilter implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (!session()->has('id_company')) {
-            return redirect()->back();
+        if (!session()->get('idCompany')) {
+            return redirect()->to('/login_company');
         }
     }
 

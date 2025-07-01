@@ -26,42 +26,31 @@ class LoginCompany extends BaseController
         return view('LoginCompany/View', $data);
     }
 
-    public function loginCompany() {
-        $this->validation->setRules(
-            [
-                'email' => [
-                    'label'  => 'Email',
-                    'rules'  => 'required|valid_email|email_company[email]',
-                    'errors' => [
-                        'required' => 'Kolom Wajib Diisi',
-                        'valid_email' => '{field} tidak valid',
-                        'is_unique' => '{field} sudah terdaftar',
-                        'email_company' => '{field} tidak ditemukan'
-                    ],
-                ],
-                'password' => [
-                    'label'  => 'Password',
-                    'rules'  => 'required|string|min_length[8]|max_length[20]|check_password[email,password]|',
-                    'errors' => [
-                        'required' => 'Kolom Wajib Diisi',
-                        'string' => 'Kolom tidak Valid',
-                        'min_length' => 'Kolom minimal 8 character',
-                        'max_length' => 'Maksimal minimal 20 character',
-                        'check_password' => '{field} salah',
-                    ],
-                ],
-            ]
-        );
-        if ($this->validation->withRequest($this->request)->run()) {
-            $idCompany = $this->companyModel->where('emailCompany', $this->request->getPost('email'))->first()['idCompany'];
-            session()->set('id_company', $idCompany);
-            return redirect()->to('/dashboard_company');
+    public function loginCompany()
+    {
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+
+        $companyModel = new \App\Models\CompanyModel();
+        $company = $companyModel->getCompanyByEmail($email);
+
+        if ($company) {
+            if ($company['status'] == 'pending') {
+                return redirect()->back()->withInput()->with('error', 'Akun perusahaan Anda masih menunggu persetujuan admin.');
+            }
+            if ($company['status'] == 'rejected') {
+                return redirect()->back()->withInput()->with('error', 'Akun perusahaan Anda ditolak. Silakan hubungi admin.');
+            }
+            if (password_verify($password, $company['passwordCompany'])) {
+                session()->set('idCompany', $company['id']); // integer
+                session()->set('idCompanyStr', $company['idCompany']); // varchar, contoh: "COMPANY - ..."
+                session()->set('namaCompany', $company['namaCompany']);
+                return redirect()->to('/dashboard_company');
+            } else {
+                return redirect()->back()->withInput()->with('error', 'Password salah.');
+            }
         } else {
-            session()->setFlashdata([
-               'email' => $this->validation->getError('email'),
-               'password' => $this->validation->getError('password')
-            ]);
-            return redirect()->back()->withInput();
+            return redirect()->back()->withInput()->with('error', 'Email tidak ditemukan.');
         }
     }
 }

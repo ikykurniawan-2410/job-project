@@ -59,7 +59,7 @@ class UserDashboard extends BaseController
         }
     }
 
-    public function resumeCV() {
+    public function resumeCV($id = null) {
         $data = [
             'title' => 'Dashboard Seeker | JobStreet.co.id',
             'dataCV' => $this->resumeModel->where('resume.idUser', session()->get('idUser'))
@@ -71,6 +71,9 @@ class UserDashboard extends BaseController
 
     public function uploadCV() {
         $this->userInfo = $this->userModel->where('idUser', session()->get('idUser'))->first();
+        if (!$this->userInfo) {
+            return redirect()->back()->with('errorUpload', 'User tidak ditemukan.');
+        }
         $this->validation->setRules([
             'uploadCV' => [
                 'label'  => 'Upload CV',
@@ -92,13 +95,13 @@ class UserDashboard extends BaseController
             ]
         ]);
         if ($this->validation->withRequest($this->request)->run()) {
-            $userID = $this->userInfo;
+            $userID = $this->userInfo['idUser'];
             $fileResumePDF = $this->request->getFile('uploadCV');
             $randomName = $fileResumePDF->getRandomName();
 
             $data = [
                 'idResume' => 'RESUME-' . uniqid(),
-                'idUser' => $userID['idUser'],
+                'idUser' => $userID,
                 'addressCVPDF' => 'cv/' . $randomName,
             ];
 
@@ -117,7 +120,6 @@ class UserDashboard extends BaseController
             } catch (ReflectionException $e) {
                 throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
             }
-
         } else {
             session()->setFlashdata('error', $this->validation->getError('uploadCV'));
             return redirect()->back();
@@ -212,5 +214,15 @@ class UserDashboard extends BaseController
             'detailUser' => $this->userModel->where('idUser', session()->get('idUser'))->first(),
         ];
         return view('DashboardUser/ProfileUser/StatusLamaranView', $data);
+    }
+
+    public function profile()
+    {
+        var_dump(session()->get('idUser')); // Debug di sini
+        $userId = session()->get('idUser');
+        $profileUser = $this->userModel->where('idUser', $userId)->first();
+        return view('DashboardUser/ProfileUser/ProfileView', [
+            'profileUser' => $profileUser
+        ]);
     }
 }

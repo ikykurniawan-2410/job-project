@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
         <a class="navbar-brand" href="/dashboard_company">
-            <img src="<?= base_url() ?>/icons/jobstreet-logo.png" style="max-width: 40%; max-height: 40%" class="d-inline-block align-text-top">
+            <img src="<?= base_url() ?>/icons/logo2.png" style="max-width: 40%; max-height: 40%" class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
